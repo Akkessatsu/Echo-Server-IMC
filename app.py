@@ -27,7 +27,6 @@ class App():
         print()
 
     @classmethod
-        
     def row(cls):
         """Generates a row of 81 asterisks.
         """
@@ -108,7 +107,7 @@ class App():
                 'altura',
                 'peso',
                 'sexo',
-                'nvlAtiv',
+                'nvl_ativ',
                 'idade'
                ]
         dic = {
@@ -156,7 +155,7 @@ class App():
     @classmethod
     def print_result(cls, list: list[str]):
         """Generates a printed message containing the result
-        of TMB, IMC o QtdCal
+        of TMB, BMI or QtdCal
 
         Args:
             list (list[str]): The result of user TMB, BMI or QtdCal
@@ -232,7 +231,7 @@ class App():
                 A dictionary that contains all the user information('altura',
                 'peso',
                 'sexo',
-                'nvlAtiv',
+                'nvl_ativ',
                 'idade',
                 'imc',
                 'statusImc',

@@ -107,7 +107,7 @@ while True:
         Returns:
             A float value that represents the user quantity of calories.
         """
-        match dict['nvlAtiv']:
+        match dict['nvl_ativ']:
             case 1:
                 fator_ativ = 1.2
             case 2:
