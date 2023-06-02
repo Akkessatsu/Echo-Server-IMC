@@ -16,18 +16,18 @@ port = 9999
 s.connect((host, port))
 
 # create a App object
-clientApp = App()
+client_app = App()
 
 # collecting user data
-values = clientApp.collectUserData()
+values = client_app.collect_user_data()
 
 # processing user data
-listData = clientApp.validateData(values)
-finalData = clientApp.generateDict(listData)
+list_data  = client_app.validate_data(values)
+final_data = client_app.generate_dict(list_data)
 
 # serialising data
 # pass the data to json
-data = json.dumps(finalData)
+data = json.dumps(final_data)
 
 # pass to bytes
 data = data.encode("ascii")
@@ -35,7 +35,7 @@ data = data.encode("ascii")
 # send data to server
 s.send(data)
 
-# recive no more than 1024 bytes
+# receive no more than 1024 bytes
 # pass to json
 response = s.recv(1024).decode()
 
@@ -43,7 +43,7 @@ response = s.recv(1024).decode()
 response = json.loads(response)
 
 # menu
-clientApp.menu(response)
+client_app.menu(response)
 
 # close connection
 s.close()
